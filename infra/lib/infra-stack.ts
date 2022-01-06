@@ -78,9 +78,7 @@ export class InfraStack extends Stack {
                 groupName: this.featureVariationDisabledName
               }
             ],
-            // You have to account for the deployment time, otherwise the feature will never launch.
-
-            // startTime: new Date().toISOString(),
+            // Does not really work? See the notes regarding `startTime`
             startTime: new Date(Date.now() + 1000 * 60 * 3).toISOString()
           }
         ]
